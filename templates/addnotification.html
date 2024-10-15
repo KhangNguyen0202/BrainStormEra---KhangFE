@@ -11,10 +11,10 @@
 
     <div class="container">
         <div class="addheader">
-            <h1>Add Notifications</h1>
+            <h1>Add Notification</h1>
         </div>
         
-        <form class="notification-form">
+        <form class="notification-form" id="notificationForm">
             <div class="form-group">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" placeholder="Write..." />
@@ -25,20 +25,44 @@
                 <input type="text" id="content" placeholder="Write..." />
             </div>
 
-            <div class="form-group">
+            <div class="form-group select-group">
                 <select>
-                    <option>Viewer</option>
-                    <option>Editor</option>
-                    <option>Admin</option>
+                    <option>Learner</option>
+                    <option>Instructor</option>
+                </select>
+
+                <select>
+                    <option>Info</option>
+                    <option>Warning</option>
+                    <option>Reminder</option>
                 </select>
             </div>
-
+            
             <div class="form-actions">
                 <button type="button" class="cancel">Cancel</button>
                 <button type="submit" class="send">Send</button>
             </div>
         </form>
     </div>
+
+    <!-- Dialog hiển thị danh sách user -->
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog">
+            <h3>Select Users</h3>
+            <ul>
+                <!-- Dữ liệu mẫu với checkbox -->
+                <li><input type="checkbox" value="John Doe">John Doe</li>
+                <li><input type="checkbox" value="Jane Smith">Jane Smith</li>
+                <li><input type="checkbox" value="Mike Johnson">Mike Johnson</li>
+                <li><input type="checkbox" value="Emily Davis">Emily Davis</li>
+                <li><input type="checkbox" value="Chris Brown">Chris Brown</li>
+            </ul>
+            <button id="sendToUsers">Send</button>
+        </div>
+    </div>
+
+    <!-- Liên kết file JavaScript -->
+    <script src="../assests/js/notification.js"></script>
 
 </body>
 </html>
